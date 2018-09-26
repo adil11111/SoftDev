@@ -4,20 +4,23 @@
     <title> {{ titl }} </title>
   </head>
   <body>
-    <h1> Here be thine {{ titl }}</h1>
+    <h2>Occupations in the U.S.</h2><!--description-->
+    This website gives a list of various job classes and the percentage of people in each class.<br></br>
+        It'll then present you a random job class that is weighted based on the percentage of that job class.
+    <h2> Here be thine {{ titl }}</h2> <!-- result of random occuaption selection-->
     Your occupation is {{ thineOcc }}
     <br>
     <table border=1>
       <tr>
-	{% for ind in th %}
-	<th> {{ind}} </th>
+	{% for elem in th %}<!--table heading-->
+	<th> {{elem}} </th>
 	{% endfor %}
       </tr>
       
-      {% for ser in magarita %}
+      {% for subL in superL %}<!--table data-->
       <tr>
-	{% for ind in ser %}
-	<td> {{ind}} </td>
+	{% for elem in subL %}<!-- first is occupation, second rate-->
+	<td> {{elem}} </td>
 	{% endfor %}
       </tr>
       {% endfor %}
