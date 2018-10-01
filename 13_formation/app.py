@@ -6,7 +6,7 @@ app = Flask(__name__)
 def func():
     print(app)
     return render_template("form.html")
-@app.route("/auth")
+@app.route("/auth",methods = ["GET","POST"])
 def authenticate():
     print(app)
     print(request)
