@@ -13,7 +13,7 @@ def authenticate():
     print(request.args)
     #print(request.args['username'])
     #print(request.method)
-    result = request.args['username']
+    result = request.form['username']
     method=request.method
     return render_template("form2.html",name=result,methodUsed=method)
 
