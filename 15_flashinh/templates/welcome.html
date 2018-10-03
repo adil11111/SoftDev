@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    Home Page
+{% endblock %}
+{% block content %}
+    <h1>Welcome to the Home Page!</h1>
+    Hello <b>{{user}}</b>! <br>
+    You have logged in successfully and stored a session.<br>
+    Try closing this page and then going back to the root route.<br><br>
+    Alternatively, you can log out and remove your session.<br><br>
+    <form action = "/logout">
+      <input type = "submit" name = "logout" value = "Log Out">
+    </form>
+{% endblock %}
