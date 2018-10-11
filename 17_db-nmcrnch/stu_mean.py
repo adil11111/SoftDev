@@ -9,7 +9,7 @@ DB_FILE="discobandit.db"
 
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
-db.text_factory = str         #change data from fethall() from unicode to utf
+db.text_factory = str         #change data from fetchall() from unicode to utf
 
 #=======================================================================
 
