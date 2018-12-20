@@ -15,20 +15,30 @@ var gcd = function (a, b){
     return gcd(b, a % b);
 }
 
-var students = ["Sam", "Tom", "Bobby", "Smith"];
+var students = ["Sam", "Tom", "Bobby", "Smith", "Tony", "John"];
 
 
 var randomStudent = function (){
-    var rand = Math.floor(Math.random() * 4);
+    var rand = Math.floor(Math.random() * 6);
     console.log(students[rand]);
     return students[rand];
 }
-var constant = function(){
-    console.log(5);
-    return 5;
+var preFib = function(){
+    var result = fibby(10);
+    console.log(result);
+    return result;
+}
+var preGcd = function(){
+    var answer = gcd(25,55);
+    console.log(answer);
+    return answer;
 }
 var randStudent = document.getElementById("randStudent");
 randStudent.addEventListener('click',randomStudent);
+
 var fib = document.getElementById("fib");
-fib.addEventListener('click',fibby);
+fib.addEventListener('click',preFib);
+
+var gcdButton = document.getElementById("gcd");
+gcdButton.addEventListener('click',preGcd);
 
