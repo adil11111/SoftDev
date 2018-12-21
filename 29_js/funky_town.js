@@ -34,11 +34,29 @@ var preGcd = function(){
     return answer;
 }
 var randStudent = document.getElementById("randStudent");
-randStudent.addEventListener('click',randomStudent);
+randStudent.addEventListener('click',function(){
+    var result = randomStudent();
+    var par = document.getElementById("show");
+    par.innerHTML="Random Student Name: ";
+    par.innerHTML+= result;
+    console.log(result);
+});
 
 var fib = document.getElementById("fib");
-fib.addEventListener('click',preFib);
+fib.addEventListener('click',function(){
+    var result = fibby(7);
+    var par = document.getElementById("show");
+    par.innerHTML="Seventh Fibonacci Number: ";
+    par.innerHTML+= result;
+    console.log(result);
+});
 
 var gcdButton = document.getElementById("gcd");
-gcdButton.addEventListener('click',preGcd);
+gcdButton.addEventListener('click',function(){
+    var result = gcd(25,55);
+    var par = document.getElementById("show");
+    par.innerHTML="GCD of 25 & 55: ";
+    par.innerHTML+= result;
+    console.log(result);
+});
 
